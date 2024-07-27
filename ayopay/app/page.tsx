@@ -22,7 +22,7 @@ export default function Home() {
       <RightSidebar
         user={user}
         transactions={[]}
-        banks={[]}
+        banks={['wema bank', 'first bank']}
       />
     </main> 
   );

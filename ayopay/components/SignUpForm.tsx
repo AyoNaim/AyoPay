@@ -3,6 +3,7 @@ import { SubmitButton } from '@/components/submit-button'
 import { redirect } from "next/navigation";
 import Image from 'next/image';
 import Link from 'next/link'
+import { signUpWithEmail } from '@/lib/actions';
 
 const SignInForm = () => {
     const handleSignUp = () => {
@@ -38,7 +39,7 @@ const SignInForm = () => {
             type="name"
             name="name"
             placeholder="Doe"
-            required
+            // required
             />
             <label className="text-sm" htmlFor="name">
             <p className='text-sm'>Address</p>
@@ -48,7 +49,7 @@ const SignInForm = () => {
             type="name"
             name="name"
             placeholder="Enter your Address"
-            required
+            // required
             />
             <label className="text-sm" htmlFor="name">
             <p className='text-sm'>City</p>
@@ -58,7 +59,7 @@ const SignInForm = () => {
             type="name"
             name="name"
             placeholder="Example:San Francisco"
-            required
+            // required
             />
             <label className="text-sm" htmlFor="name">
             <p className='text-sm'>State</p>
@@ -68,7 +69,7 @@ const SignInForm = () => {
             type="name"
             name="name"
             placeholder="Example: California"
-            required
+            // required
             />
             <label className="text-sm" htmlFor="name">
             <p className='text-sm'>Postal Code</p>
@@ -78,7 +79,7 @@ const SignInForm = () => {
             type="name"
             name="name"
             placeholder="Example: 11234"
-            required
+            // required
             />
             <label className="text-sm" htmlFor="name">
             <p className='text-sm'>Date Of Birth</p>
@@ -88,7 +89,7 @@ const SignInForm = () => {
             type="name"
             name="name"
             placeholder="dd/mm/yyyy"
-            required
+            // required
             />
             <label className="text-sm" htmlFor="name">
             <p className='text-sm'>SSN</p>
@@ -98,7 +99,7 @@ const SignInForm = () => {
             type="name"
             name="name"
             placeholder="Example:1234"
-            required
+            // required
             />
             <label className="text-sm" htmlFor="email">
             <p className='text-sm'>Email</p>
@@ -121,6 +122,7 @@ const SignInForm = () => {
             required
             />
             <SubmitButton
+            formAction={signUpWithEmail}
             className="bg-blue-900 rounded-md px-4 py-2 text-white mb-2"
             pendingText="Signing In..."
             >
